@@ -37,7 +37,7 @@ const VideoPage = () => {
     try {
       setVideo(undefined);
 
-      const response = await axios.post('/api/video', values);
+      const response = await axios.post('https://replicate-api.onrender.com/fetch-data', values);
 
       setVideo(response.data[0]);
       form.reset();
